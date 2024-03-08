@@ -1,0 +1,39 @@
+version: '3.5'
+
+services:
+  image:
+    container_name: fraud-check-commons
+    image: fraud-check-commons
+    command: list
+    build:
+      context: .
+      target: dev
+      args:
+        COMPOSER_AUTH: ${COMPOSER_AUTH}
+
+  composer:
+    container_name: fraud-check-commons-composer
+    image: fraud-check-commons
+    depends_on:
+      - image
+    entrypoint: composer
+    command: validate
+    environment:
+      COMPOSER_AUTH: ${COMPOSER_AUTH}
+    volumes:
+      - ./:/opt/www
+
+  app:
+    container_name: fraud-check-commons-app
+    image: fraud-check-commons
+    entrypoint: php
+    tty: true
+    command: '-S 0.0.0.0:8083'
+    volumes:
+      - ./:/opt/www
+    networks:
+      - bubble
+
+networks:
+  bubble:
+    external: true

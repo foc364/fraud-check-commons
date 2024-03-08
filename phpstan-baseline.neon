@@ -1,0 +1,166 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Class LeoCarmo\\\\CircuitBreaker\\\\Adapters\\\\RedisClusterAdapter not found\\.$#"
+			count: 1
+			path: config/autoload/circuit-breaker.php
+
+		-
+			message: "#^Call to an undefined method Interop\\\\Queue\\\\Message\\:\\:setKey\\(\\)\\.$#"
+			count: 1
+			path: src/Broker/Infrastructure/BrokerProducer.php
+
+		-
+			message: "#^Cannot call method get\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Broker/Infrastructure/BrokerProducer.php
+
+		-
+			message: "#^Method PicPay\\\\FraudCheckCommons\\\\Bus\\\\Domain\\\\CommandBusInterface\\:\\:dispatch\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Bus/Domain/CommandBusInterface.php
+
+		-
+			message: "#^Method PicPay\\\\FraudCheckCommons\\\\Bus\\\\Domain\\\\CommandHandlerInterface\\:\\:handle\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Bus/Domain/CommandHandlerInterface.php
+
+		-
+			message: "#^Method PicPay\\\\FraudCheckCommons\\\\Bus\\\\Infrastructure\\\\CommandBus\\:\\:dispatch\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Bus/Infrastructure/CommandBus.php
+
+		-
+			message: "#^Cannot call method get\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Bus/Infrastructure/Factory/CommandBusFactory.php
+
+		-
+			message: "#^Constant BASE_PATH not found\\.$#"
+			count: 9
+			path: src/ConfigProvider.php
+
+		-
+			message: "#^Cannot call method offsetExists\\(\\) on mixed\\.$#"
+			count: 2
+			path: src/Context/Infraestructure/ContextManager.php
+
+		-
+			message: "#^Cannot call method offsetGet\\(\\) on mixed\\.$#"
+			count: 2
+			path: src/Context/Infraestructure/ContextManager.php
+
+		-
+			message: "#^Cannot call method offsetSet\\(\\) on mixed\\.$#"
+			count: 2
+			path: src/Context/Infraestructure/ContextManager.php
+
+		-
+			message: "#^Method PicPay\\\\FraudCheckCommons\\\\Context\\\\Infraestructure\\\\ContextManager\\:\\:getPid\\(\\) should return int\\|null but returns mixed\\.$#"
+			count: 1
+			path: src/Context/Infraestructure/ContextManager.php
+
+		-
+			message: "#^Parameter \\#1 \\$cid of method PicPay\\\\FraudCheckCommons\\\\Context\\\\Infraestructure\\\\ContextManager\\:\\:getPid\\(\\) expects int, int\\|null given\\.$#"
+			count: 1
+			path: src/Context/Infraestructure/ContextManager.php
+
+		-
+			message: "#^Parameter \\#2 \\$cid of method PicPay\\\\FraudCheckCommons\\\\Context\\\\Infraestructure\\\\ContextManager\\:\\:parentSearch\\(\\) expects int\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Context/Infraestructure/ContextManager.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 2
+			path: src/EventSourcing/Infrastructure/Aggregate/AggregateRoot.php
+
+		-
+			message: "#^Parameter \\#1 \\$aggregateRootClassName of class EventSauce\\\\EventSourcing\\\\EventSourcedAggregateRootRepository constructor expects class\\-string\\<T of EventSauce\\\\EventSourcing\\\\AggregateRoot\\>, string given\\.$#"
+			count: 1
+			path: src/EventSourcing/Infrastructure/Aggregate/AggregateRootRepository.php
+
+		-
+			message: "#^Parameter \\#1 \\$eventType of method PicPay\\\\FraudCheckCommons\\\\EventSourcing\\\\Domain\\\\EventTypeFormatted\\:\\:format\\(\\) expects string, array\\|bool\\|EventSauce\\\\EventSourcing\\\\AggregateRootId\\|float\\|int\\|string\\|null given\\.$#"
+			count: 1
+			path: src/EventSourcing/Infrastructure/Message/MessageRepository.php
+
+		-
+			message: "#^Parameter \\#1 \\$time of static method Carbon\\\\Carbon\\:\\:parse\\(\\) expects DateTimeInterface\\|string\\|null, array\\|bool\\|EventSauce\\\\EventSourcing\\\\AggregateRootId\\|float\\|int\\|string\\|null given\\.$#"
+			count: 1
+			path: src/EventSourcing/Infrastructure/Message/MessageRepository.php
+
+		-
+			message: "#^Cannot cast mixed to string\\.$#"
+			count: 1
+			path: src/FeedzaiTokenManager/Infrastructure/FeedzaiTokenManager.php
+
+		-
+			message: "#^Method PicPay\\\\FraudCheckCommons\\\\Http\\\\Infrastructure\\\\CorrelationIdService\\:\\:get\\(\\) should return string\\|null but returns mixed\\.$#"
+			count: 1
+			path: src/Http/Infrastructure/CorrelationIdService.php
+
+		-
+			message: "#^Property PicPay\\\\FraudCheckCommons\\\\Http\\\\Infrastructure\\\\FeedzaiClient\\:\\:\\$correlationIdService is never read, only written\\.$#"
+			count: 1
+			path: src/Http/Infrastructure/FeedzaiClient.php
+
+		-
+			message: "#^Method PicPay\\\\FraudCheckCommons\\\\Http\\\\Infrastructure\\\\HttpClient\\:\\:send\\(\\) has parameter \\$options with no type specified\\.$#"
+			count: 1
+			path: src/Http/Infrastructure/HttpClient.php
+
+		-
+			message: "#^Method PicPay\\\\FraudCheckCommons\\\\Http\\\\Infrastructure\\\\HttpClient\\:\\:send\\(\\) has parameter \\$payload with no type specified\\.$#"
+			count: 1
+			path: src/Http/Infrastructure/HttpClient.php
+
+		-
+			message: "#^Method PicPay\\\\FraudCheckCommons\\\\Http\\\\Infrastructure\\\\HttpClient\\:\\:send\\(\\) should return array but returns mixed\\.$#"
+			count: 1
+			path: src/Http/Infrastructure/HttpClient.php
+
+		-
+			message: "#^Method PicPay\\\\FraudCheckCommons\\\\Http\\\\Middleware\\\\CorrelationIdMiddleware\\:\\:generateRequestId\\(\\) never returns null so it can be removed from the return type\\.$#"
+			count: 1
+			path: src/Http/Middleware/CorrelationIdMiddleware.php
+
+		-
+			message: "#^Parameter \\#1 \\$correlationId of method PicPay\\\\FraudCheckCommons\\\\Http\\\\Infrastructure\\\\CorrelationIdService\\:\\:set\\(\\) expects string, string\\|null given\\.$#"
+			count: 1
+			path: src/Http/Middleware/CorrelationIdMiddleware.php
+
+		-
+			message: "#^Cannot call method get\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Logger/Infrastructure/StdoutLoggerFactory.php
+
+		-
+			message: "#^Parameter \\#2 \\$haystack of method PHPUnit\\\\Framework\\\\Assert\\:\\:assertContains\\(\\) expects iterable, mixed given\\.$#"
+			count: 1
+			path: test/Unit/FeedzaiTokenManager/Infrastructure/FeedzaiTokenManagerTest.php
+
+		-
+			message: "#^Parameter \\#3 \\$body of class GuzzleHttp\\\\Psr7\\\\Response constructor expects Psr\\\\Http\\\\Message\\\\StreamInterface\\|resource\\|string\\|null, string\\|false given\\.$#"
+			count: 2
+			path: test/Unit/Http/Middleware/CorrelationIdMiddlewareTest.php
+
+		-
+			message: "#^Parameter \\#4 \\$body of class GuzzleHttp\\\\Psr7\\\\ServerRequest constructor expects Psr\\\\Http\\\\Message\\\\StreamInterface\\|resource\\|string\\|null, string\\|false given\\.$#"
+			count: 2
+			path: test/Unit/Http/Middleware/CorrelationIdMiddlewareTest.php
+
+		-
+			message: "#^Call to method PHPUnit\\\\Framework\\\\Assert\\:\\:assertArrayHasKey\\(\\) with 'X\\-Request\\-ID' and array\\{message\\: string, context\\: array, level\\: 100\\|200\\|250\\|300\\|400\\|500\\|550\\|600, level_name\\: 'ALERT'\\|'CRITICAL'\\|'DEBUG'\\|'EMERGENCY'\\|'ERROR'\\|'INFO'\\|'NOTICE'\\|'WARNING', channel\\: string, datetime\\: DateTimeImmutable, extra\\: array\\} will always evaluate to false\\.$#"
+			count: 1
+			path: test/Unit/Logger/Infraestructure/CorrelationIdLogProcessorTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$record of callable PicPay\\\\FraudCheckCommons\\\\Logger\\\\Infrastructure\\\\CorrelationIdLogProcessor expects array\\{message\\: string, context\\: array, level\\: 100\\|200\\|250\\|300\\|400\\|500\\|550\\|600, level_name\\: 'ALERT'\\|'CRITICAL'\\|'DEBUG'\\|'EMERGENCY'\\|'ERROR'\\|'INFO'\\|'NOTICE'\\|'WARNING', channel\\: string, datetime\\: DateTimeImmutable, extra\\: array\\}, array\\{message\\: 'Fake Log', context\\: array\\{\\}\\} given\\.$#"
+			count: 1
+			path: test/Unit/Logger/Infraestructure/CorrelationIdLogProcessorTest.php
+
+		-
+			message: "#^Constant BASE_PATH not found\\.$#"
+			count: 2
+			path: test/bootstrap.php

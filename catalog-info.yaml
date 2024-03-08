@@ -1,0 +1,32 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: fraud-check-commons
+  tags:
+    - repository
+    - github
+  description: |
+    Repo compartilhado entre os micro-serviços da squad de prevenção a fraud transacional
+  links:
+      -   url: https://picpay.atlassian.net/secure/RapidBoard.jspa?rapidView=332&projectKey=PROT
+          title: Jira Board
+          icon: dashboard
+      -   url: https://picpay.atlassian.net/wiki/spaces/SPF/overview
+          title: Confluence Docs
+          icon: dashboard
+  labels:
+      moonlight.picpay/language: php
+      moonlight.picpay/framework: hyperf
+      moonlight.picpay/database: mongodb
+      moonlight.picpay/cache: redis
+      moonlight.picpay/monitoring: newrelic
+      moonlight.picpay/queue: kafka
+  annotations:
+      backstage.io/kubernetes-id: fraud-check-commons
+      github.com/project-slug: PicPay/fraud-check-commons
+      sonarqube.org/project-key: PicPay_fraud-check-commons
+      newrelic.com/app-name: fraud-check-commons
+spec:
+  lifecycle: production
+  owner: prevencao-transacional
+  type: library

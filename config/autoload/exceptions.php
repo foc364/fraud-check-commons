@@ -1,0 +1,13 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'handler' => [
+        'http' => [
+            Hyperf\HttpServer\Exception\Handler\HttpExceptionHandler::class,
+            PicPay\Hyperf\Commons\Exception\Handler\AppExceptionHandler::class,
+            Hyperf\Validation\ValidationExceptionHandler::class,
+        ],
+    ],
+];

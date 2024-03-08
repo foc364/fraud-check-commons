@@ -1,0 +1,83 @@
+{
+  "name": "picpay/fraud-check-commons",
+  "description": "Fraud Check common and shared modules",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Gabriela Bonelli",
+      "email": "gabriela.valle@picpay.com"
+    },
+    {
+      "name": "Greg Alves Satorres",
+      "email": "greg.satorres@picpay.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "eventsauce/eventsauce": "^3.0",
+    "hyperf/cache": "~2.2.0",
+    "hyperf/command": "~2.2.0",
+    "hyperf/config": "~2.2.0",
+    "hyperf/db-connection": "~2.2.0",
+    "hyperf/framework": "~2.2.0",
+    "hyperf/guzzle": "~2.2.0",
+    "hyperf/http-server": "~2.2.0",
+    "hyperf/logger": "~2.2.0",
+    "hyperf/memory": "~2.2.0",
+    "hyperf/metric": "~2.2.0",
+    "hyperf/process": "~2.2.0",
+    "hyperf/database": "~2.2.0",
+    "hyperf/redis": "~2.2.0",
+    "lcobucci/jwt": "^4.2",
+    "league/tactician": "^1.1",
+    "picpay/hyperf-commons": "^2.3",
+    "ramsey/uuid": "^4.2",
+    "hyperf/validation": "^2.2",
+    "reasno/fastmongo": "^0.2.6"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.0",
+    "swoole/ide-helper": "dev-master",
+    "hyperf/testing": "^2.2",
+    "hyperf/watcher": "~2.2.0",
+    "phpstan/phpstan": "^1.8",
+    "phpstan/phpstan-phpunit": "^1.1"
+  },
+  "autoload" : {
+    "psr-4" : {
+      "PicPay\\FraudCheckCommons\\":  "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Test\\": "test/"
+    }
+  },
+  "repositories": {
+    "tracer": {
+      "type": "vcs",
+      "url": "https://github.com/PicPay/hyperf-tracer"
+    },
+    "php-contracts": {
+      "type": "vcs",
+      "url": "https://github.com/PicPay/picpay-php-contracts"
+    },
+    "hyperf-commons": {
+      "type": "vcs",
+      "url": "https://github.com/PicPay/picpay-hyperf-commons"
+    }
+  },
+  "scripts": {
+    "test": "co-phpunit --prepend test/bootstrap.php -c phpunit.xml --colors=always",
+    "test:filter": "co-phpunit --prepend test/bootstrap.php -c phpunit.xml --colors=always --filter",
+    "coverage": "co-phpunit --prepend test/bootstrap.php -c phpunit.xml --colors=always --coverage-html=./test/reports/coverage",
+    "test:clover": "co-phpunit --prepend test/bootstrap.php -c phpunit.xml --colors=always --coverage-clover=./test/reports/clover.xml"
+  },
+  "extra": {
+    "hyperf": {
+      "config": "PicPay\\FraudCheckCommons\\ConfigProvider"
+    }
+  }
+}
